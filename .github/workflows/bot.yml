@@ -24,5 +24,5 @@ jobs:
       - name: Run bot
         run: python bot.py
         env:
-          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-          GEMINI_API: ${{ secrets.GEMINI_API }}
+          BOT_TOKEN: ${{ 8669478332:AAEchKpc1C9D27Nkr1Zr0tscyiI_q3nMIuI }}
+          GEMINI_API: ${{ AIzaSyCu_KkHr2JKW3Hiv78xsye5d3K9Jp5XVLs }}

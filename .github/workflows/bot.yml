@@ -1,26 +1,22 @@
-name: Run Telegram Bot
+name: Telegram Bot
 
 on:
   workflow_dispatch:
 
 jobs:
-  run-bot:
+  bot:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      - name: Setup Python
-        uses: actions/setup-python@v4
+      - uses: actions/setup-python@v4
         with:
           python-version: "3.10"
 
-      - name: Install requirements
-        run: pip install -r requirements.txt
+      - run: pip install -r requirements.txt
 
-      - name: Run bot
-        run: python bot.py
+      - run: python bot.py
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
           GEMINI_API: ${{ secrets.GEMINI_API }}
